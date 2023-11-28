@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 6vw;
+}
+
+main {
+    margin-top: 50px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+}
+
+h1 + p {
+    margin-top: 25px;
+}
+
+h3 + div,
+h3 + form {
+    margin-top: 30px;
+}
+
+div + div {
+    margin-top: 20px;
+}
+
+label {
+    vertical-align: top;
+}
+
+p {
+    margin: 0;
+}
+
+p + p {
+    margin-top: 15px;
+}
+
+ul,
+ol {
+    padding: 0;
+}
+
+li + li {
+    margin-top: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    margin-top: 50px;
+}
+
+/* Form*/
+
+input[type=text] {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-radius: 0;
+    width: 250px;
+}
+
+input + label,
+button + button,
+span:nth-child(3) {
+    margin-left: 20px;
+}
+
+.error:not(input):not(textarea) {
+    color: red;
+}
+
+input.error {
+    border-color: red;
+}
+
+
+/*
+ * to-do-list
+ * detail
+*/
+
+.to-do-list,
+.detail {
+    border: solid 1px black;
+    margin-top: 50px;
+    padding: 30px;
+    position: relative;
+}
+
+.to-do-list__actions {
+    margin-top: 50px;
+}
+
+.detail {
+    overflow-y: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.detail--ferme {
+    max-height: 85px;
+}
+
+.detail--ouvert {
+    max-height: 300px;
+}
+
+.detail__tache {
+    margin-top: 0;
+}
+
+.detail__info {
+    margin-top: 30px;
+}
+
+.chevron {
+    cursor: pointer;
+    margin: 0;
+    padding: 35px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.chevron::before {
+    content: '';
+    border-style: solid;
+    border-width: 0.25em 0.25em 0 0;
+    display: inline-block;
+    height: 0.45em;
+    position: absolute;
+    right: 35px;
+    top: 35px;
+    width: 0.45em;
+}
+
+.chevron--bottom:before {
+    transform: rotate(135deg);
+}
+
+.chevron--top:before {
+    transform: rotate(-45deg);
+}
