@@ -63,7 +63,7 @@ export default class Formulaire{
         if (elCheckedImportance) {
             if (this.#_elsInputImportance[0].parentNode.classList.contains('error')) this.#_elsInputImportance[0].parentNode.classList.remove('error');
         } else {
-            this._elsInputImportance[0].parentNode.classList.add('error');
+            this.#_elsInputImportance[0].parentNode.classList.add('error');
             estValide = false;
         }
 
